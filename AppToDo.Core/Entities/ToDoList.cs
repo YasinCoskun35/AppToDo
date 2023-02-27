@@ -8,8 +8,12 @@ namespace AppToDo.Core.Entities
 {
     public class ToDoList:BaseEntity
     {
-        public string? Title { get; set; }
+        public string Title { get; set; }
+        public bool Public { get; set; }
+        public string Description { get; set; }
 
+
+        public User Creator { get; set; }
         public ICollection<ToDoItem>? ToDoItems { get; set; }
     }
 }

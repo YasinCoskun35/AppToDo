@@ -10,5 +10,9 @@ namespace AppToDo.Core.Entities
     {
         public String Name { get; set; }
         public String UserName { get; set; }
+
+        public ICollection<ToDoList>? CreatedToDoLists { get; set; }
+        public ICollection<ToDoList>? FollowedToDoLists { get; set; }
+
     }
 }
