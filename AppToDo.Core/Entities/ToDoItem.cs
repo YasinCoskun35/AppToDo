@@ -14,6 +14,7 @@ namespace AppToDo.Core.Entities
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
 
-        public Guid ToDoListId { get; set; }
+        public ToDoList ToDoList { get; set; }
+        public ICollection<ToDoAction> ToDoActions { get; set; }
     }
 }

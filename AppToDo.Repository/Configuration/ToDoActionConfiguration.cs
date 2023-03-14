@@ -15,7 +15,7 @@ namespace AppToDo.Repository.Configuration
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
-            builder.Property(x => x.ToDoItemId).IsRequired();
+            builder.HasOne(tdi => tdi.ToDoItem).WithMany(tda => tda.ToDoActions);
             builder.ToTable("ToDoActions");
         }
     }

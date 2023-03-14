@@ -15,6 +15,7 @@ namespace AppToDo.Repository.Configuration
         {
             builder.HasKey(x => x.Id);
             builder.Property(x => x.Id).UseIdentityColumn();
+            builder.HasOne(tdl=>tdl.Creator).WithMany(creator=>creator.CreatedToDoLists);
         }
     }
 }

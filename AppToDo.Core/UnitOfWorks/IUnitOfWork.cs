@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppToDo.Core.UnitOfWorks
 {
-    internal interface IUnitOfWork
+    public interface IUnitOfWork
     {
         Task CommitAsync();
 

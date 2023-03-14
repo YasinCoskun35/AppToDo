@@ -13,6 +13,8 @@ namespace AppToDo.Repository.Configuration
             builder.Property(x => x.Id).UseIdentityColumn();
             builder.Property(x => x.Name).IsRequired();
             builder.Property(x => x.UserName).IsRequired();
+            builder.HasMany(user => user.FollowedToDoLists);
+            builder.HasMany(user => user.CreatedToDoLists);
         }
     }
 }

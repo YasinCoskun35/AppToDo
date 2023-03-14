@@ -9,6 +9,6 @@ namespace AppToDo.Core.Entities
     public class ToDoAction:BaseEntity
     {
         public bool IsDone { get; set; }
-        public Guid ToDoItemId { get; set; }
+        public ToDoItem ToDoItem { get; set; }
     }
 }
